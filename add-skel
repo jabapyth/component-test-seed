@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+if [ -L $0 ] ; then
+  DIR=$(dirname $(readlink -f $0));
+else
+  DIR=$(dirname $0);
+fi;
+
+cp $DIR/.travis.yml ./
+cat $DIR/Makerest >> Makefile
+component install --dev visionmedia/mocha
+component install --dev chaijs/chai
+
+if [[ $1 == 'angular' ]]; then
+  cp -r $DIR/test-ang ./test
+else
+  cp -r $DIR/test ./
+fi;
+

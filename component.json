@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "repo": "test/test",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {
+    "chaijs/chai": "*",
+    "visionmedia/mocha": "*",
+    "jabapyth/angularjs": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

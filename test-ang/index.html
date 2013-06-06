@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Component Test</title>
+    <link rel="stylesheet" href="../components/visionmedia-mocha/mocha.css">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../components/visionmedia-mocha/mocha.js"></script>
+    <script src="sinon-1.7.1.js"></script>
+    <script src="../build/build.js"></script>
+    <script>mocha.setup('bdd');</script>
+    <script src="tests.js"></script>
+    <script src="angular-mocks.js"></script>
+    <script>
+      mocha.checkLeaks();
+      if (window.mochaPhantomJS) { 
+        mochaPhantomJS.run(); 
+      }else { 
+        mocha.run();
+      }
+    </script>
+  </body>
+</html>
